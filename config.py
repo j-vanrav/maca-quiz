@@ -11,5 +11,5 @@ class Config(object):
         URL = 'http://localhost:5000'
     elif ENV == 'prod':
         SQLALCHEMY_DATABASE_URI = 'postgresql' + os.environ.get('DATABASE_URL')[8:] or ''
-        URL = 'https://maca-quiz.herokuapp.com'
+        URL = 'https://macca-quiz.herokuapp.com'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
