@@ -2,30 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Interactive Quiz</title>
+        <title>{{ title }}</title>
     </head>
     <body>
-        <form method="post">
-            {{ form.hidden_tag() }}
-            <p>
-                {{ quizform.answer(), placeholder = "Answer" }}
-                <div class="errors">
-                    {% for error in quizform.answer.errors %}
-                    {{error}}
-                    {% endfor %}
-                </div>
-            </p>
-            <p>
-                {{ quizform.submit() }}
-            </p>
-            <input type="radio" name="answer" value="A">
-            <label for="a">A</label><br>
-            <input type="radio" name="answer" value="B">
-            <label for="b">B</label><br>
-            <input type="radio" name="answer" value="C">
-            <label for="c">C</label><br>
-            <input type="radio" name="answer" value="D">
-            <label for="d">D</label><br>
-        </form>
+        <p>Quiz website</p>
+        <a href="/quiz">Go to the quiz</a>
     </body>
 </html>
