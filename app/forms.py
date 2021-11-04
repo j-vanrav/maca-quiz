@@ -9,4 +9,4 @@ class QuizForm(FlaskForm):
 
 class ResetForm(FlaskForm):
     password    = PasswordField('Password', validators=[DataRequired()])
-    submit      = SubmitField("Submit Request")
+    submit      = SubmitField("Reset Answers")
