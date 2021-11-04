@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect
+from flask import render_template, redirect
 from app import app, db, Config
 from app.models import Result
 from app.forms import QuizForm, ResetForm

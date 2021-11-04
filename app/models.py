@@ -1,4 +1,3 @@
-from wtforms.validators import IPAddress
 from app import db
 
 class Result(db.Model):

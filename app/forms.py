@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import PasswordField, SubmitField, RadioField
-from wtforms.validators import DataRequired, ValidationError, EqualTo
+from wtforms.validators import DataRequired
 from app.models import Result
 
 class QuizForm(FlaskForm):
