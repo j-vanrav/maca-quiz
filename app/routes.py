@@ -25,8 +25,7 @@ def quiz():
 @app.route("/reset", methods=['GET', 'POST'])
 def reset():
     resetform = ResetForm()
-    if resetform.validate_on_submit():
+    if resetform.validate_on_submit() and resetform.password.data=="iloveflask":
         db.session.execute('''TRUNCATE TABLE Result''')
         db.session.commit()
-        return redirect("/success")
     return render_template("reset.html", title="Results & Reset", resetform=resetform)
