@@ -4,11 +4,6 @@ from app.models import Result
 from app.forms import QuizForm, ResetForm
 import psycopg2
 
-@app.route("/")
-@app.route("/index")
-def index():
-    return render_template("index.html", title = "Home Page")
-
 @app.route("/result")
 def success():
     return render_template("result.html",
@@ -19,6 +14,7 @@ def success():
         dvotes = Result.query.filter_by(answer = "D").count()
     )
 
+@app.route("/")
 @app.route("/quiz", methods=['GET', 'POST'])
 def quiz():
     quizform = QuizForm()
