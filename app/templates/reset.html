@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>{{ title }}</title>
-    </head>
-    <body>
-        <form action="" method="post">
-            {{ resetform.csrf_token }}
-            {{ resetform.password }}
-            {{ resetform.submit() }}
-        </form>
-    </body>
-</html>
+{% extends "nav.html" %}
+
+{% block content %}
+<body>
+    <form action="" method="post">
+        {{ resetform.csrf_token }}
+        {{ resetform.password }}
+        {{ resetform.submit() }}
+    </form>
+</body>
+{% endblock %}
