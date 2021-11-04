@@ -14,7 +14,7 @@ def success():
         dvotes = Result.query.filter_by(answer = "D").count()
     )
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 @app.route("/quiz", methods=['GET', 'POST'])
 def quiz():
     quizform = QuizForm()
