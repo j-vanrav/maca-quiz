@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>{{ title }}</title>
-    </head>
-    <body>
-        <p>Thank you for your submission</p>
-        <p>{{ avotes }} votes for A</p>
-        <p>{{ bvotes }} votes for B</p>
-        <p>{{ cvotes }} votes for C</p>
-        <p>{{ dvotes }} votes for D</p>
-        <a href="/quiz">Answer again</a>
-    </body>
-</html>
+{% extends "nav.html" %}
+
+{% block content %}
+<div>
+    <p>Thank you for your submission</p>
+    <p>{{ avotes }} votes for A</p>
+    <p>{{ bvotes }} votes for B</p>
+    <p>{{ cvotes }} votes for C</p>
+    <p>{{ dvotes }} votes for D</p>
+</div>
+{% endblock %}
