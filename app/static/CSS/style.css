@@ -1,75 +1,58 @@
-:root{
-    --color-cosmic-latte: #FEF7E7;
-    --color-beau-blue: #B6D7F0;
-    --color-pale-blue: #B9F0E0;
-    --color-amaranth-pink: #EC94B7;
-    --color-melon: #FAB3A7;
-}
-
 *{
     margin: 0;
     font-family: sans-serif;
 }
 html{
-    background-color: var(--color-cosmic-latte);
+    background-color: white;
 }
 body{
     height: 100vh;
     width: 100vw;
+	text-align: center;
+	align-items: center;
+}
+footer{
+	position: fixed;
+	left: 0;
+	bottom: 2px;
+	width: 100%;
 }
 
-.nav a{
-    padding-right: 5vw;
-}
+#answer-0:after{content: 'A';}
+#answer-1:after{content: 'B';}
+#answer-2:after{content: 'C';}
+#answer-3:after{content: 'D';}
 
-#answer-0{
-    background-color: var(--color-beau-blue);
-}
-#answer-0:after{
-    content: 'A';
+form input:after{
 	font-size: 32px;
-}
-#answer-0:checked:after{
-	content: '\25BA A \25C4';
-}
-#answer-1{
-    background-color: var(--color-pale-blue);
-}
-#answer-1:after{
-    content: 'B';
-	font-size: 32px;
-}
-#answer-1:checked:after{
-	content: '\25BA B \25C4';
-}
-#answer-2{
-    background-color: var(--color-amaranth-pink);
-}
-#answer-2:after{
-    content: 'C';
-	font-size: 32px;
-}
-#answer-2:checked:after{
-	content: '\25BA C \25C4';
-}
-#answer-3{
-    background-color: var(--color-melon);
-}
-#answer-3:after{
-    content: 'D';
-	font-size: 32px;
-}
-#answer-3:checked:after{
-	content: '\25BA D \25C4';
 }
 
 form input {
 	-webkit-appearance: none;
-    border: none;
-	box-shadow: 0 0 3vh rgb(71, 71, 71);
 	padding: 10vh;
     margin: 2vh;
-	border-radius: 10px;
 	display: inline-block;
 	position: relative;
+    border: none;
+    outline: none;
+	padding: 15px 25px;
+	font-size: 24px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: #fff;
+	background-color: #04AA6D;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+}
+
+  
+form input:hover {
+	background-color: #3e8e41
+}
+  
+form input:checked, form input:active{
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
 }
