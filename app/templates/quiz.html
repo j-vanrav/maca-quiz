@@ -1,10 +1,13 @@
 {% extends "nav.html" %}
 
 {% block content %}
-<div>
+<div class="quiz">
     <form action="" method="post">
         {{ quizform.csrf_token }}
-        {{ quizform.answer }}
+        {% for choice in quizform.answer %}
+            {{ choice }}
+        {% endfor %}
+        <br>
         {{ quizform.submit() }}
     </form>
 </div>

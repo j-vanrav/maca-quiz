@@ -1,11 +1,11 @@
 {% extends "nav.html" %}
 
 {% block content %}
-<body>
+<div class="reset">
     <form action="" method="post">
         {{ resetform.csrf_token }}
         {{ resetform.password }}
         {{ resetform.submit() }}
     </form>
-</body>
+</div>
 {% endblock %}
