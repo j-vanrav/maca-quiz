@@ -6,12 +6,17 @@ import psycopg2
 
 @app.route("/result")
 def success():
+    avotes = Result.query.filter_by(answer = "A").count()
+    bvotes = Result.query.filter_by(answer = "B").count()
+    cvotes = Result.query.filter_by(answer = "C").count()
+    dvotes = Result.query.filter_by(answer = "D").count()
     return render_template("result.html",
         title = "Submission Successful",
-        avotes = Result.query.filter_by(answer = "A").count(),
-        bvotes = Result.query.filter_by(answer = "B").count(),
-        cvotes = Result.query.filter_by(answer = "C").count(),
-        dvotes = Result.query.filter_by(answer = "D").count()
+        avotes = avotes,
+        bvotes = bvotes,
+        cvotes = cvotes,
+        dvotes = dvotes,
+        totalvotes=avotes+bvotes+cvotes+dvotes+0.001 # +0.001 to prevent division by 0 error
     )
 
 @app.route("/", methods=['GET', 'POST'])

@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>{{ title }}</title>
-    </head>
-    <body>
-        <form action="" method="post">
-            {{ quizform.csrf_token }}
-            {{ quizform.answer }}
-            {{ quizform.submit() }}
-        </form>
-        <a href="/result">See results</a>
-    </body>
-</html>
+{% extends "nav.html" %}
+
+{% block content %}
+<div class="quiz">
+    <br>
+    <form action="" method="post">
+        {{ quizform.csrf_token }}
+        {% for choice in quizform.answer %}
+            {{ choice }}
+        {% endfor %}
+        <br><br>
+        {{ quizform.submit() }}
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    </head>
+    <body>
+        {% block nav %}
+        {% endblock %}
+        {% block content %}
+        {% endblock %}
+    </body>
+    <footer>
+        <p><a href="https://github.com/j-vanrav/maca-quiz">github</a></p>
+    </footer>
+</html>

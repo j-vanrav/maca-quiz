@@ -1,15 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>{{ title }}</title>
-    </head>
-    <body>
-        <p>Thank you for your submission</p>
-        <p>{{ avotes }} votes for A</p>
-        <p>{{ bvotes }} votes for B</p>
-        <p>{{ cvotes }} votes for C</p>
-        <p>{{ dvotes }} votes for D</p>
-        <a href="/quiz">Answer again</a>
-    </body>
-</html>
+{% extends "nav.html" %}
+
+{% block content %}
+<div class="result">
+    <br>
+    <br>
+    <p>A: {{ avotes }} votes</p>
+    <div class="resultHolder"><div class="resultBar" style="width:{{ (avotes/totalvotes)*100 }}%"></div></div>
+    <br><br>
+    <p>B: {{ bvotes }} votes</p>
+    <div class="resultHolder"><div class="resultBar" style="width:{{ (bvotes/totalvotes)*100 }}%"></div></div>
+    <br><br>
+    <p>C: {{ cvotes }} votes</p>
+    <div class="resultHolder"><div class="resultBar" style="width:{{ (cvotes/totalvotes)*100 }}%"></div></div>
+    <br><br>
+    <p>D: {{ dvotes }} votes</p>
+    <div class="resultHolder"><div class="resultBar" style="width:{{ (dvotes/totalvotes)*100 }}%"></div></div>
+</div>
+{% endblock %}
