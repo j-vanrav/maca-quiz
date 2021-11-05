@@ -56,3 +56,26 @@ form input:checked, form input:active{
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
 }
+
+.resultHolder{
+	width: 75%;
+	margin-left: 12.5%;
+	background-color: #ccc;
+	border-radius: 5px;
+}
+.resultBar{
+	background-color: #04AA6D;
+	height: 5vh;
+	border-radius: 5px;
+}
+
+#password{
+	cursor: auto;
+}
+#password:checked, #password:active{
+	box-shadow: 0 9px #999;
+	transform: translateY(0);
+}
+#password:checked{
+	background-color: #04AA6D;
+}

@@ -2,10 +2,19 @@
 
 {% block content %}
 <div class="result">
+    <br>
     <p>Thank you for your submission</p>
-    <p>{{ avotes }} votes for A</p>
-    <p>{{ bvotes }} votes for B</p>
-    <p>{{ cvotes }} votes for C</p>
-    <p>{{ dvotes }} votes for D</p>
+    <br>
+    <p>A: {{ avotes }} votes</p>
+    <div class="resultHolder"><div class="resultBar" style="width:{{ (avotes/totalvotes)*100 }}%"></div></div>
+    <br>
+    <p>B: {{ bvotes }} votes</p>
+    <div class="resultHolder"><div class="resultBar" style="width:{{ (bvotes/totalvotes)*100 }}%"></div></div>
+    <br>
+    <p>C: {{ cvotes }} votes</p>
+    <div class="resultHolder"><div class="resultBar" style="width:{{ (cvotes/totalvotes)*100 }}%"></div></div>
+    <br>
+    <p>D: {{ dvotes }} votes</p>
+    <div class="resultHolder"><div class="resultBar" style="width:{{ (dvotes/totalvotes)*100 }}%"></div></div>
 </div>
 {% endblock %}

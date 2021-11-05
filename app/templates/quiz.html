@@ -2,12 +2,13 @@
 
 {% block content %}
 <div class="quiz">
+    <br>
     <form action="" method="post">
         {{ quizform.csrf_token }}
         {% for choice in quizform.answer %}
             {{ choice }}
         {% endfor %}
-        <br>
+        <br><br>
         {{ quizform.submit() }}
     </form>
 </div>
